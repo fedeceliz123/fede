@@ -4,25 +4,32 @@
     <link href="lib/main.css" rel="stylesheet" />
     <script src="lib/main.js"></script>
         <link href='fullcalendar/main.css' rel='stylesheet' />
+     
     <script src='fullcalendar/main.js'></script>
+    <script src="lib/locales-all.js"></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: 'dayGridMonth',
-            selectable: true
-          
+            selectable: true,
+            locale: 'es',
+            events: [
+
+                {
+                    id: "",
+                    title: "",
+                    start: "",
+                    end:""
+                }
+            ]
+            
         });
           calendar.render();
           
       });
-
-        dateClick: function(info) {
-            alert('Date: ' + info.dateStr);
-            alert('Resource ID: ' + info.resource.id);
-        }
-      
+        
       
       
     </script>
