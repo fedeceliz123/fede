@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="Material.aspx.cs" Inherits="WebStagePro.Paginas.Material" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="CargaMaterial.aspx.cs" Inherits="WebStagePro.Paginas.Material" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
@@ -128,6 +128,7 @@
     </div>
 
          </div>
+        </div>
 
 
 </asp:Content>

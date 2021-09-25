@@ -57,3 +57,9 @@ C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\obj\
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\obj\Debug\WebStagePro.csproj.CopyComplete
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\obj\Debug\WebStagePro.dll
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\obj\Debug\WebStagePro.pdb
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Entidades.dll
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Negocio.dll
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Datos.dll
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Entidades.pdb
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Negocio.pdb
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Datos.pdb
