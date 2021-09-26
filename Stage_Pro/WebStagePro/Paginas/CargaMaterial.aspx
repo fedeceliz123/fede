@@ -24,17 +24,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="container">
+        <div class="row" style="padding-top:30px">
+            <h3>Carga de material</h3>
+
+        </div>
+        <hr />
         <div class="row"  style="padding-top:30px" >
             <div class="col-lg-6 col-sm-12" >
                 <asp:Label ID="Label1" runat="server" Text="Tipo"></asp:Label>
                 <div class="row">
 
                 <div class="col-10">
-            <asp:DropDownList ID="selectTipo" runat="server" CssClass="form-select"></asp:DropDownList>
+            <asp:DropDownList ID="selectTipo" runat="server" CssClass="form-select" OnSelectedIndexChanged="selectTipo_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
 
                 </div>
                 <div class="col-2">
-                    <asp:ImageButton ID="btnMasTipo" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" />
+                    <asp:ImageButton ID="btnMasTipo" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" OnClick="btnMasTipo_Click" />
                 </div>
                     
                 </div>
@@ -46,11 +51,11 @@
                 <div class="row">
 
                 <div class="col-10">
-            <asp:DropDownList ID="SelectModelo" runat="server" CssClass="form-select"></asp:DropDownList>
+            <asp:DropDownList ID="SelectModelo" runat="server" CssClass="form-select" OnSelectedIndexChanged="SelectModelo_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
 
                 </div>
                 <div class="col-2">
-                    <asp:ImageButton ID="btnMasModelo" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" />
+                    <asp:ImageButton ID="btnMasModelo" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" OnClick="btnMasModelo_Click" />
                 </div>
                     
                 </div>
@@ -71,7 +76,7 @@
 
                 </div>
                 <div class="col-2">
-                    <asp:ImageButton ID="btnMasFormato" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" />
+                    <asp:ImageButton ID="btnMasFormato" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" OnClick="btnMasFormato_Click" />
                 </div>
                     
                 </div>
@@ -87,7 +92,7 @@
 
                 </div>
                 <div class="col-2">
-                    <asp:ImageButton ID="btnMasMedida" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" />
+                    <asp:ImageButton ID="btnMasMedida" runat="server" ImageUrl="../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" OnClick="btnMasMedida_Click" />
                 </div>
                     
                 </div>
@@ -126,9 +131,99 @@
 
 
     </div>
+            <div class="row"  style="padding-top:30px" >
+            <div class="col-lg-6 col-sm-12" >
+                <asp:Label ID="Label7" runat="server" Text="Stock"></asp:Label>
+                <div class="row">
+
+                <div class="col-10">
+            
+                    <asp:TextBox ID="txtStock" runat="server" CssClass=" form-control" type="number" min="0" ></asp:TextBox>
+                </div>
+                <div class="col-2">
+                </div>
+                    
+                </div>
+                
+
+            </div>
+            <%--<div class="col-lg-6 col-sm-12 volver" >
+               <asp:Label ID="Label8" runat="server" Text="Disponibilidad"></asp:Label>
+                <div class="row">
+
+                <div class="col-10" >
+            
+                     <asp:TextBox ID="txtDisponibilidad" runat="server" CssClass="form-control" type="number" min="0"   ></asp:TextBox>
+                </div>
+                <div class="col-2">
+                </div>
+                  
+                </div>
+        </div>--%>
+
+
+
+    </div>
+            <div class="row" style="padding-top:30px">
+                <div class="col-2 col-md-2 col-lg-1">
+                  <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary" OnClick="btnCargar_Click" />
+
+                </div>
+                <div class="col-2 col-md-2 col-lg-1">
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" />
+
+                </div>
+            </div>
 
          </div>
         </div>
+
+
+       <!--Modal Nuevo -->
+ <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                
+                 <asp:Label ID="lblNuevo" runat="server" Text="" CssClass="col-form-label-lg text-bold"></asp:Label>
+             </div>
+             <div class="modal-body">
+                 <asp:TextBox ID="txtNuevo" runat="server" CssClass="form-control"></asp:TextBox>
+             </div>
+             <div class="modal-footer">
+                 <asp:Button ID="btnNuevo" runat="server" Text="Cargar" CssClass="btn btn-success" OnClick="btnNuevo_Click" />
+                 <button class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+             </div>
+         </div>
+     </div>
+ </div>
+
+           <!--Modal Carga -->
+ <div class="modal fade" id="modalCarga" tabindex="-1" role="dialog">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                
+                 <asp:Label ID="lblCarga" runat="server" Text="" CssClass="col-form-label-lg text-bold"></asp:Label>
+
+                
+             </div>
+             <div class="modal-body">
+                 <div style="text-align:center">
+
+                 <asp:Image ID="imgCarga" runat="server" Height="150px" />
+                 <br />
+                   <br />
+                 <asp:Label ID="lblAccion" runat="server" Text="" CssClass="col-form-label-md text-bold"></asp:Label>
+                 </div>
+             </div>
+             <div class="modal-footer">
+                 
+               <button class="btn btn-primary" data-dismiss="modal">OK</button>
+             </div>
+         </div>
+     </div>
+ </div>
 
 
 </asp:Content>

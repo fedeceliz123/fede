@@ -19,6 +19,13 @@ namespace WebStagePro
         {
             Session["CodigoMaterial"] = null;
             Session["Permiso"] = null;
+            Session["FormatoAux"] = null;
+            Session["Tipo"] = null;
+            Session["Modelo"] = null;
+            Session["UltimoMaterial"] = null;
+            Session["Nuevo"] = null;
+            Session["Numero"] = null;
+            Session["Activo"] = "si";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

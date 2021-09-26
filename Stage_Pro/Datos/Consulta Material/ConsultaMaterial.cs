@@ -142,7 +142,7 @@ namespace Datos.Consulta_Matrial
         public DataTable LlenarFormato(string tipo)
         {
             DataTable dt = new DataTable();
-            string consulta = "select id,formato from formato_material where id_tipo='" + tipo+"'";
+            string consulta = "select id,formato from formato_material where cod='" + tipo+"'";
             SqlDataAdapter da = new SqlDataAdapter(consulta, Conetar());
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -156,7 +156,7 @@ namespace Datos.Consulta_Matrial
 
         public void CargaMaterial(Material material)
         {
-            string consulta = "insert into material (tipo,modelo,numero,codigo,medida,formato,codigo_qr,activo,detalle)values(@tipo,@modelo,@num,@cod,@medida,@nombre,@qr,'si',@detalle)";
+            string consulta = "insert into material (tipo,modelo,numero,codigo,medida,formato,activo,detalle,stock_general,disponobilidad)values(@tipo,@modelo,@num,@cod,@medida,@nombre,'si',@detalle,@stock,@disp)";
             SqlCommand cmd = new SqlCommand(consulta, Conetar());
 
             cmd.Parameters.AddWithValue("@tipo", material.tipo);
@@ -165,8 +165,10 @@ namespace Datos.Consulta_Matrial
             cmd.Parameters.AddWithValue("@cod", material.codigo);
             cmd.Parameters.AddWithValue("@medida", material.medida);
             cmd.Parameters.AddWithValue("@nombre", material.formato);
-            cmd.Parameters.AddWithValue("@qr", material.codigo_qr);
-          
+            cmd.Parameters.AddWithValue("@stock", material.stock_general);
+            cmd.Parameters.AddWithValue("@disp", material.disponobilidad);
+            //cmd.Parameters.AddWithValue("@qr", material.codigo_qr);
+
             cmd.Parameters.AddWithValue("@detalle", material.detalle);
             cmd.ExecuteNonQuery();
         }

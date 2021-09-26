@@ -163,6 +163,8 @@
     <Content Include="Imagenes\+.png" />
     <Content Include="Imagenes\logo.png" />
     <Content Include="Imagenes\user.png" />
+    <Content Include="Imagenes\V.png" />
+    <Content Include="Imagenes\x.png" />
     <Content Include="Inicio.aspx" />
     <Content Include="lib\locales-all.js" />
     <Content Include="lib\locales-all.min.js" />
