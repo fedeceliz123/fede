@@ -13,6 +13,9 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 
+
+
+
       
     <asp:ContentPlaceHolder ID="head" runat="server">
 
@@ -257,6 +260,9 @@
 
             </asp:ContentPlaceHolder>
 
+
+
+      
     </form>
 </body>
 </html>

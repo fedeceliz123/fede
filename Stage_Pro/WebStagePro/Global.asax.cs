@@ -26,6 +26,7 @@ namespace WebStagePro
             Session["Nuevo"] = null;
             Session["Numero"] = null;
             Session["Activo"] = "si";
+            Session["Proveedor"] = null;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

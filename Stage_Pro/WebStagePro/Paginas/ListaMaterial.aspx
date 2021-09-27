@@ -35,7 +35,7 @@
             </div>
         </div>
         <hr />
-        <asp:GridView ID="GVMaterial" runat="server" AutoGenerateColumns="False" CssClass="table table-dark" OnRowCommand="GVMaterial_RowCommand" DataKeyNames="Codigo" >
+        <asp:GridView ID="GVMaterial" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-dark" OnRowCommand="GVMaterial_RowCommand" DataKeyNames="Codigo" >
             <Columns>
                 <asp:BoundField HeaderText="Codigo" DataField="Codigo" />
                 <asp:BoundField HeaderText="Tipo" DataField="Tipo"/>

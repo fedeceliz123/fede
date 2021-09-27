@@ -15,7 +15,7 @@ namespace Datos.ConsultasProveedores
         {
             DataTable dt = new DataTable();
 
-            string consulta = "select cuit as 'Dni',razon_social as 'Razon Social', nombre_fantasia as 'Nombre Fantasia',rubro as 'Rubro' from proveedores where activo='" + activo + "'";
+            string consulta = "select cuit as 'Cuit',razon_social as 'Razon Social', nombre_fantasia as 'Nombre Fantasia',rubro as 'Rubro' from proveedores where activo='" + activo + "'";
             SqlDataAdapter da = new SqlDataAdapter(consulta, Conetar());
             DataSet ds = new DataSet();
             da.Fill(ds);
