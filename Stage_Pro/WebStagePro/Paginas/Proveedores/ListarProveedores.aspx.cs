@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using Entidades;
 using Negocio;
 using System.Data;
-
+//asda
 
 namespace WebStagePro.Paginas.Proveedores
 {
