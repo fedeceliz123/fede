@@ -8,9 +8,14 @@ using System.Web.UI.WebControls;
 namespace WebStagePro
 {
     public partial class Maestra : System.Web.UI.MasterPage
+
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //string nombre = Request.QueryString["empleado"].ToString();
+
+            //lblUsuario.Text = nombre;
+            
 
         }
     }

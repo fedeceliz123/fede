@@ -206,6 +206,7 @@
     <Content Include="examples\timegrid-views.html" />
     <Content Include="examples\week-numbers.html" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Fondo.jpg" />
     <Content Include="Imagenes\mas.jpg" />
     <Content Include="Imagenes\+.png" />
     <Content Include="Imagenes\logo.png" />

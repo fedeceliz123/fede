@@ -43,6 +43,7 @@ namespace Datos.Consultas_Login
             if (leer.Read() == true)
             {
                 nombre = leer["nombres"].ToString();
+                
             }
 
 

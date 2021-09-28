@@ -6,8 +6,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../../Content/Styles/Login.css" rel="stylesheet" />
-    <link href="../../Content/bootstrap.css" rel="stylesheet" />
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>
 
@@ -18,15 +16,18 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
  
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
 
     <title></title>
 </head>  
-<body>
+<body style="background-image:url(../../Imagenes/Fondo.jpg); background-repeat: no-repeat;height:100%;width:100%;background-size: cover">
+    
     <form id="form1" runat="server" class="fondo">
               <div class="formulario" style=" display:flex; flex-direction:column;align-items:center;justify-content:center"">
                   
-                  <div class="row">
-                      <asp:Image ID="Image1" runat="server" Height="80px" />
+                  <div class="row" style="padding-bottom:30px">
+                      <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="../../Imagenes/logo.png" />
 
                   </div>
                   <div class ="row" >
@@ -59,12 +60,12 @@
                   </div>
                   
                   <div class ="row" style="margin-top:30px">
-                      <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Black"><b>Recuperar contraseña</b></asp:LinkButton>
+                      <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="Blue"><b>Recuperar contraseña</b></asp:LinkButton>
                   </div>
 
                   <div class ="row" style="margin-top:30px">
                       <div col="col-10">
-                      <asp:Button ID="Button1" runat="server" Text="Ingresar" CssClass="btn btn-primary" />
+                      <asp:Button ID="Button1" runat="server" Text="Ingresar" CssClass="btn btn-primary" OnClick="Button1_Click"  />
 
                       </div>
 
@@ -73,7 +74,32 @@
 
                   </div>
 
+                   <!--Modal Carga -->
+                     <div class="modal fade" id="modalError" tabindex="-1" role="dialog">
+                         <div class="modal-dialog">
+                             <div class="modal-content">
+                                 <div class="modal-header">
+                
+                                     <asp:Label ID="lblCarga" runat="server" Text="Usuario o contraseña incorrecta" CssClass="col-form-label-lg text-bold"></asp:Label>
 
+                
+                                 </div>
+                                 <div class="modal-body">
+                                     <div style="text-align:center">
+
+                                     <asp:Image ID="imgCarga" runat="server" Height="150px" ImageUrl="../../Imagenes/x.png" />
+                                     <br />
+                                       <br />
+                                     <asp:Label ID="lblAccion" runat="server" Text="" CssClass="col-form-label-md text-bold"></asp:Label>
+                                     </div>
+                                 </div>
+                                 <div class="modal-footer">
+                 
+                              <%--     <button class="btn btn-primary" data-dismiss="modal">OK</button>--%>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
             
     </form>
 
