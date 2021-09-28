@@ -5,23 +5,15 @@
   
     
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="../../Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+
     
  
     <script src="../../Scripts/bootstrap.js"></script>
-    <script src="../../Scripts/bootstrap-datepicker.js"></script>--%>
+
    
 
 
-    <script type="text/javascript">
-        
-            $("#<%=txtFechaingreso%>").datetimepicker({
-                  format: 'yyyy-mm-dd',
-
-         })
-    
-
-    </script>
+ 
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -128,12 +120,12 @@
 
                  <asp:Label ID="Label5" runat="server" Text="Fecha de ingreso"></asp:Label>
                 
-                   <div   class="input-group mb-3" >
+    
+          <div class="input-group date">
+          <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+             <asp:TextBox ID="txtFechaingreso"  runat="server" AutoCompleteType="Disabled"  MaxLength="10" CssClass="form-control" type="date" ></asp:TextBox>
             
-                 <asp:TextBox ID="txtFechaingreso" runat="server" CssClass="form-control form_date"  ></asp:TextBox>
-              <span class="input-group-text" id="basic-addon1"><i class="fas fa-calendar-alt"></i></span>
-            
-  </div> 
+         </div>
                  
              </div>
              <div class="modal-footer">
@@ -172,6 +164,6 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
     
-   
+
 
 </asp:Content>

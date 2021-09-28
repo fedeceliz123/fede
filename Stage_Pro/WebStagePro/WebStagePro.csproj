@@ -85,6 +85,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Styles\bootstrap.css" />
+    <Content Include="Content\Styles\datepicker3.css" />
+    <Content Include="Content\Styles\Login.css" />
+    <Content Include="Content\Styles\nuevo_estilo.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -357,8 +361,45 @@
     <Content Include="pages\UI\timeline.html" />
     <Content Include="pages\widgets.html" />
     <Content Include="Paginas\CargaMaterial.aspx" />
+    <Content Include="Paginas\Clientes\CargaClinete.aspx" />
+    <Content Include="Paginas\Empleados\CargarEmpleado.aspx" />
+    <Content Include="Paginas\Eventos\CargaEventos.aspx" />
     <Content Include="Paginas\ListaMaterial.aspx" />
+    <Content Include="Paginas\Login\Login.aspx" />
+    <Content Include="Paginas\MaterialReparar\MaterialReparar.aspx" />
+    <Content Include="Paginas\Proveedores\CargarProveedores.aspx" />
     <Content Include="Paginas\Proveedores\ListarProveedores.aspx" />
+    <Content Include="Paginas\SaldidaMaterial\CargarSalidaMaterial.aspx" />
+    <Content Include="Pikaday-master\.gitattributes" />
+    <Content Include="Pikaday-master\.gitignore" />
+    <Content Include="Pikaday-master\css\pikaday.css" />
+    <Content Include="Pikaday-master\css\site.css" />
+    <Content Include="Pikaday-master\css\theme.css" />
+    <Content Include="Pikaday-master\css\triangle.css" />
+    <Content Include="Pikaday-master\examples\amd.html" />
+    <Content Include="Pikaday-master\examples\aria-label.html" />
+    <Content Include="Pikaday-master\examples\bound-container.html" />
+    <Content Include="Pikaday-master\examples\calendars.html" />
+    <Content Include="Pikaday-master\examples\container.html" />
+    <Content Include="Pikaday-master\examples\date-fns.html" />
+    <Content Include="Pikaday-master\examples\date-range.html" />
+    <Content Include="Pikaday-master\examples\daysInNextMonth.html" />
+    <Content Include="Pikaday-master\examples\diableDayFn.html" />
+    <Content Include="Pikaday-master\examples\jquery-amd.html" />
+    <Content Include="Pikaday-master\examples\jquery.html" />
+    <Content Include="Pikaday-master\examples\moment.html" />
+    <Content Include="Pikaday-master\examples\pick-whole-week.html" />
+    <Content Include="Pikaday-master\examples\position-css-classes.html" />
+    <Content Include="Pikaday-master\examples\positions.html" />
+    <Content Include="Pikaday-master\examples\screenshot.png" />
+    <Content Include="Pikaday-master\examples\theme.html" />
+    <Content Include="Pikaday-master\examples\trigger.html" />
+    <Content Include="Pikaday-master\examples\weeknumbers.html" />
+    <Content Include="Pikaday-master\index.html" />
+    <Content Include="Pikaday-master\pikaday.js" />
+    <Content Include="Pikaday-master\plugins\pikaday.jquery.js" />
+    <Content Include="Pikaday-master\tests\methods.js" />
+    <Content Include="Pikaday-master\tests\module.js" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
     <Content Include="plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
@@ -2199,6 +2240,18 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Pikaday-master\.editorconfig" />
+    <Content Include="Pikaday-master\.jshintrc" />
+    <Content Include="Pikaday-master\.npmignore" />
+    <Content Include="Pikaday-master\bower.json" />
+    <Content Include="Pikaday-master\CHANGELOG.md" />
+    <Content Include="Pikaday-master\CNAME" />
+    <Content Include="Pikaday-master\component.json" />
+    <Content Include="Pikaday-master\LICENSE" />
+    <Content Include="Pikaday-master\package-lock.json" />
+    <Content Include="Pikaday-master\package.json" />
+    <Content Include="Pikaday-master\README.md" />
+    <Content Include="Pikaday-master\scss\pikaday.scss" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -2237,6 +2290,27 @@
     <Compile Include="Paginas\CargaMaterial.aspx.designer.cs">
       <DependentUpon>CargaMaterial.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Clientes\CargaClinete.aspx.cs">
+      <DependentUpon>CargaClinete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Clientes\CargaClinete.aspx.designer.cs">
+      <DependentUpon>CargaClinete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Empleados\CargarEmpleado.aspx.cs">
+      <DependentUpon>CargarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Empleados\CargarEmpleado.aspx.designer.cs">
+      <DependentUpon>CargarEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Eventos\CargaEventos.aspx.cs">
+      <DependentUpon>CargaEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Eventos\CargaEventos.aspx.designer.cs">
+      <DependentUpon>CargaEventos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\ListaMaterial.aspx.cs">
       <DependentUpon>ListaMaterial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2244,12 +2318,40 @@
     <Compile Include="Paginas\ListaMaterial.aspx.designer.cs">
       <DependentUpon>ListaMaterial.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\MaterialReparar\MaterialReparar.aspx.cs">
+      <DependentUpon>MaterialReparar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\MaterialReparar\MaterialReparar.aspx.designer.cs">
+      <DependentUpon>MaterialReparar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Proveedores\CargarProveedores.aspx.cs">
+      <DependentUpon>CargarProveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Proveedores\CargarProveedores.aspx.designer.cs">
+      <DependentUpon>CargarProveedores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Proveedores\ListarProveedores.aspx.cs">
       <DependentUpon>ListarProveedores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Paginas\Proveedores\ListarProveedores.aspx.designer.cs">
       <DependentUpon>ListarProveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\SaldidaMaterial\CargarSalidaMaterial.aspx.cs">
+      <DependentUpon>CargarSalidaMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\SaldidaMaterial\CargarSalidaMaterial.aspx.designer.cs">
+      <DependentUpon>CargarSalidaMaterial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -2376,6 +2478,7 @@
       <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

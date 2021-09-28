@@ -24,3 +24,16 @@ C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\Negocio\obj\Debu
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\Negocio\obj\Debug\Negocio.dll
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\Negocio\obj\Debug\Negocio.pdb
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\Negocio.dll
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\Negocio.pdb
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\Datos.dll
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\Entidades.dll
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\System.Data.SqlClient.dll
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\Datos.pdb
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\Entidades.pdb
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\bin\Debug\System.Data.SqlClient.xml
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\obj\Debug\Negocio.dll
+C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Negocio\obj\Debug\Negocio.pdb
