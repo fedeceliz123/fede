@@ -51,7 +51,7 @@ namespace Datos.ConsultaEventos
             string fecha = (DateTime.Now.AddDays(-1)).ToString("yyyy/MM/dd");
 
             DataTable dt = new DataTable();
-            string consulta = "select e.id,e.lugar as 'Lugar',e.fecha_inicio as 'Fecha',e.hora_inicio as 'Hora',c.nombre+' '+c.apellido as 'Cliente' from eventos e, clientes_cf c where (e.activo='"+activo+"' and fecha_inicio > '"+fecha+ "') and id_cliente=c.dni and (c.nombre+' '+c.apellido like '%" + dato + "%' or lugar like '%" + dato + "%' or fecha_inicio like '%" + dato + "%')";
+            string consulta = "select e.id as 'id',e.lugar as 'Lugar',e.fecha_inicio as 'Fecha',e.hora_inicio as 'Hora',c.nombre+' '+c.apellido as 'Cliente' from eventos e, clientes_cf c where (e.activo='"+activo+"' and fecha_inicio > '"+fecha+ "') and id_cliente=c.dni and (c.nombre+' '+c.apellido like '%" + dato + "%' or lugar like '%" + dato + "%' or fecha_inicio like '%" + dato + "%')";
             SqlDataAdapter da = new SqlDataAdapter(consulta, Conetar());
             DataSet ds = new DataSet();
             da.Fill(ds);

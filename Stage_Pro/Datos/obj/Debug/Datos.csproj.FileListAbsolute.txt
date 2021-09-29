@@ -42,3 +42,14 @@ C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Datos\obj\Debug\Datos.csproj.Core
 C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Datos\obj\Debug\Datos.dll
 C:\Users\fceliz\Desktop\Fede\tp\fede\Stage_Pro\Datos\obj\Debug\Datos.pdb
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\bin\Debug\Datos.dll
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\bin\Debug\Datos.pdb
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\bin\Debug\Entidades.dll
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\bin\Debug\System.Data.SqlClient.dll
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\bin\Debug\Entidades.pdb
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\bin\Debug\System.Data.SqlClient.xml
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\obj\Debug\Datos.dll
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\Datos\obj\Debug\Datos.pdb

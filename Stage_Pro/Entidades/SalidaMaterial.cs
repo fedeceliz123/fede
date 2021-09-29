@@ -12,6 +12,7 @@ namespace Entidades
         public int id_evento { get; set; }
         public string codigo_material { get; set; }
         public int cantidad { get; set; }
+        public int precio { get; set; }
 
     }
 }

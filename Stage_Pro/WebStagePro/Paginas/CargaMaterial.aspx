@@ -105,7 +105,7 @@
 
                 <div class="col-10">
             
-                    <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" OnTextChanged="txtCodigo_TextChanged" AutoPostBack="true"></asp:TextBox>
                 </div>
                 <div class="col-2">
                 </div>
@@ -147,19 +147,19 @@
                 
 
             </div>
-            <%--<div class="col-lg-6 col-sm-12 volver" >
-               <asp:Label ID="Label8" runat="server" Text="Disponibilidad"></asp:Label>
+            <div class="col-lg-6 col-sm-12 volver" >
+               <asp:Label ID="Label8" runat="server" Text="Precio"></asp:Label>
                 <div class="row">
 
                 <div class="col-10" >
             
-                     <asp:TextBox ID="txtDisponibilidad" runat="server" CssClass="form-control" type="number" min="0"   ></asp:TextBox>
+                     <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" type="number" min="0"   ></asp:TextBox>
                 </div>
                 <div class="col-2">
                 </div>
                   
                 </div>
-        </div>--%>
+        </div>
 
 
 
@@ -172,6 +172,9 @@
                 <div class="col-2 col-md-2 col-lg-1">
                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" />
 
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <img runat="server" id="imgQR"/>
                 </div>
             </div>
 

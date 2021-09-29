@@ -7,13 +7,30 @@ using System.Web.UI.WebControls;
 using System.Data;
 using Entidades;
 using Negocio;
-
+using System.Drawing;
+using MessagingToolkit.QRCode.Codec;
+using System.IO;
 
 namespace WebStagePro.Paginas
 {
     public partial class ListaMaterial : System.Web.UI.Page
     {
             Negocio.NegocioMaterial nMat = new NegocioMaterial();
+        private void QR()
+        {
+            QRCodeEncoder encoder = new QRCodeEncoder();
+            Bitmap img = encoder.Encode(txtCodigo.Text);
+            System.Drawing.Image QR = (System.Drawing.Image)img;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                QR.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                byte[] imageBytes = ms.ToArray();
+                imgQR.Src = "data:image/gif;base64" + Convert.ToBase64String(imageBytes);
+                imgQR.Height = 200;
+                imgQR.Width = 200;
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -322,6 +339,10 @@ namespace WebStagePro.Paginas
             llenarGV(); 
 
 
+        }
+        protected void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            QR();
         }
     }
 }

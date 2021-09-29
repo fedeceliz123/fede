@@ -3,7 +3,8 @@
 
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
    
 
 </asp:Content>
@@ -47,6 +48,17 @@
                 <asp:ButtonField Text="Editar" CommandName="Editar" ControlStyle-CssClass="btn btn-primary" HeaderText="Editar" />
                <asp:ButtonField Text="Eliminar" CommandName="Eliminar" ControlStyle-CssClass="btn btn-danger" HeaderText="Eliminar"/>
           
+                <asp:TemplateField HeaderText="Acciones">
+                    <ItemTemplate>
+                         <asp:LinkButton runat="server" CssClass="btn btn-success" CommandName="Ver"><i class="fas fa-search"></i></asp:LinkButton>
+                    <asp:LinkButton runat="server" CssClass="btn btn-primary" CommandName="Editar"><i class="fas fa-edit"></i></asp:LinkButton>
+                    <asp:LinkButton runat="server" CssClass="btn btn-danger" CommandName="Eliminar"><i class="fas fa-trash-alt"></i></asp:LinkButton>
+
+
+                    </ItemTemplate>
+
+               </asp:TemplateField>
+
 
             </Columns>
 
@@ -67,7 +79,7 @@
              </div>
              <div class="modal-body">
                  <asp:Label ID="Label1" runat="server" Text="Codigo"></asp:Label>
-                 <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control"></asp:TextBox>
+                 <asp:TextBox ID="txtCodigo" runat="server" CssClass="form-control" OnTextChanged="txtCodigo_TextChanged"></asp:TextBox>
                  
                 
                  <asp:Label ID="Label4" runat="server" Text="Formato"></asp:Label>
@@ -106,6 +118,14 @@
                  <asp:Label ID="Label7" runat="server" Text="Disponibilidad"></asp:Label>
                  <asp:TextBox ID="txtDisponibilidad" runat="server" CssClass="form-control" type="number" ></asp:TextBox>
                  
+                  <asp:Label ID="Label8" runat="server" Text="Precio"></asp:Label>
+                 <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" type="number" ></asp:TextBox>
+                   
+                 <asp:Label ID="Label9" runat="server" Text="QR"></asp:Label>
+                 <img  runat="server" id="imgQR"/>
+
+                 <asp:Button ID="btnImprimir" runat="server" Text="Imprimir" CssClass="btn btn-primary" />
+
              </div>
              <div class="modal-footer">
                  <asp:Button ID="btnReactivar" runat="server" Text="Reactivar" CssClass="btn btn-success" OnClick="btnReactivar_Click" />

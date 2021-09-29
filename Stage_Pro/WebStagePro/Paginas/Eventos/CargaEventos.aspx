@@ -33,10 +33,20 @@
             </div>              
                
               <div class="col-lg-6 col-sm-12">
-               <asp:Label ID="Label1" runat="server" Text="Fecha de inicio"></asp:Label>
+                     <asp:Label ID="Label6" runat="server" Text="Encargado"></asp:Label>
                 
-                <asp:TextBox ID="txtFechaI" runat="server" CssClass="form-control" type="date"></asp:TextBox>
-             
+<div class="row">
+
+                <div class="col-11">
+            <asp:DropDownList ID="selectEncargado" runat="server" CssClass="form-control"  AutoPostBack="true"></asp:DropDownList>
+
+                </div>
+                <div class="col-1">
+                    <asp:ImageButton ID="btnMasEncargado" runat="server" ImageUrl="../../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" OnClick="btnMasEncargado_Click" />
+                </div>
+                    
+                </div>
+               
                
         </div>
         </div>
@@ -45,6 +55,36 @@
             <div class="row"  style="padding-top:30px" >
           
             <div class="col-lg-6 col-sm-12">
+
+                
+                <asp:Label ID="Label1" runat="server" Text="Fecha de inicio"></asp:Label>
+                
+                <asp:TextBox ID="txtFechaI" runat="server" CssClass="form-control" type="date"></asp:TextBox>
+
+             
+              
+               
+        </div>
+              <div class="col-lg-6 col-sm-12">
+               <asp:Label ID="Label4" runat="server" Text="Fecha de fin"></asp:Label>
+                
+                <asp:TextBox ID="txtFechaF" runat="server" CssClass="form-control" type="date"></asp:TextBox>
+             
+               
+        </div>
+    </div>
+
+        <div class="row"  style="padding-top:30px" >
+          
+            <div class="col-lg-6 col-sm-12">
+               <asp:Label ID="Label5" runat="server" Text="Lugar"></asp:Label>
+       <asp:TextBox ID="txtLugar" runat="server" CssClass="form-control" ></asp:TextBox>
+
+              
+               
+        </div>
+              <div class="col-lg-6 col-sm-12">
+            
                <asp:Label ID="Label3" runat="server" Text="Hora de inicio"></asp:Label>
                 
                   <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
@@ -74,55 +114,19 @@
                       <asp:ListItem Value="23:00">23:00</asp:ListItem>
 
                   </asp:DropDownList>
-              
-               
-        </div>
-              <div class="col-lg-6 col-sm-12">
-               <asp:Label ID="Label4" runat="server" Text="Fecha de fin"></asp:Label>
-                
-                <asp:TextBox ID="txtFechaF" runat="server" CssClass="form-control" type="date"></asp:TextBox>
-             
-               
-        </div>
-    </div>
-
-        <div class="row"  style="padding-top:30px" >
-          
-            <div class="col-lg-6 col-sm-12">
-               <asp:Label ID="Label5" runat="server" Text="Lugar"></asp:Label>
-       <asp:TextBox ID="txtLugar" runat="server" CssClass="form-control" ></asp:TextBox>
-
-              
-               
-        </div>
-              <div class="col-lg-6 col-sm-12">
-               <asp:Label ID="Label6" runat="server" Text="Encargado"></asp:Label>
-                
-<div class="row">
-
-                <div class="col-11">
-            <asp:DropDownList ID="selectEncargado" runat="server" CssClass="form-control"  AutoPostBack="true"></asp:DropDownList>
-
-                </div>
-                <div class="col-1">
-                    <asp:ImageButton ID="btnMasEncargado" runat="server" ImageUrl="../../Imagenes/mas.jpg"  Height="30px"  CssClass="imagenmas" OnClick="btnMasEncargado_Click" />
-                </div>
-                    
-                </div>
-                
                
         </div>
     </div>
 
           <div class="row"  style="padding-top:30px" >
           
-            <div class="col-lg-6 col-sm-12">
+        <%--    <div class="col-lg-6 col-sm-12">
                <asp:Label ID="Label7" runat="server" Text="Total"></asp:Label>
        <asp:TextBox ID="txtTotal" runat="server" CssClass="form-control" type="number" ></asp:TextBox>
 
               
                
-        </div>
+        </div>--%>
               <div class="col-lg-6 col-sm-12">
                <asp:Label ID="Label8" runat="server" Text="Detalle"></asp:Label>
                 

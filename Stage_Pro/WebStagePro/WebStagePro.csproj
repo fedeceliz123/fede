@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -365,12 +368,13 @@
     <Content Include="Paginas\Clientes\CargaClinete.aspx" />
     <Content Include="Paginas\Empleados\CargarEmpleado.aspx" />
     <Content Include="Paginas\Eventos\CargaEventos.aspx" />
+    <Content Include="Paginas\Eventos\ListarEventos.aspx" />
     <Content Include="Paginas\ListaMaterial.aspx" />
     <Content Include="Paginas\Login\Login.aspx" />
     <Content Include="Paginas\MaterialReparar\MaterialReparar.aspx" />
     <Content Include="Paginas\Proveedores\CargarProveedores.aspx" />
     <Content Include="Paginas\Proveedores\ListarProveedores.aspx" />
-    <Content Include="Paginas\SaldidaMaterial\CargarSalidaMaterial.aspx" />
+    <Content Include="Paginas\SaldidaMaterial\MaterialParaEvento.aspx" />
     <Content Include="Pikaday-master\.gitattributes" />
     <Content Include="Pikaday-master\.gitignore" />
     <Content Include="Pikaday-master\css\pikaday.css" />
@@ -2312,6 +2316,13 @@
     <Compile Include="Paginas\Eventos\CargaEventos.aspx.designer.cs">
       <DependentUpon>CargaEventos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Eventos\ListarEventos.aspx.cs">
+      <DependentUpon>ListarEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\Eventos\ListarEventos.aspx.designer.cs">
+      <DependentUpon>ListarEventos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\ListaMaterial.aspx.cs">
       <DependentUpon>ListaMaterial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2347,12 +2358,12 @@
     <Compile Include="Paginas\Proveedores\ListarProveedores.aspx.designer.cs">
       <DependentUpon>ListarProveedores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\SaldidaMaterial\CargarSalidaMaterial.aspx.cs">
-      <DependentUpon>CargarSalidaMaterial.aspx</DependentUpon>
+    <Compile Include="Paginas\SaldidaMaterial\MaterialParaEvento.aspx.cs">
+      <DependentUpon>MaterialParaEvento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Paginas\SaldidaMaterial\CargarSalidaMaterial.aspx.designer.cs">
-      <DependentUpon>CargarSalidaMaterial.aspx</DependentUpon>
+    <Compile Include="Paginas\SaldidaMaterial\MaterialParaEvento.aspx.designer.cs">
+      <DependentUpon>MaterialParaEvento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
