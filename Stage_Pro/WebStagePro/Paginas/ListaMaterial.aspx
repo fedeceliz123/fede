@@ -6,6 +6,8 @@
     <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
    
+   
+
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -36,6 +38,9 @@
             </div>
         </div>
         <hr />
+
+        <div class="col-12"
+
         <asp:GridView ID="GVMaterial" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-dark" OnRowCommand="GVMaterial_RowCommand" DataKeyNames="Codigo" >
             <Columns>
                 <asp:BoundField HeaderText="Codigo" DataField="Codigo" />
@@ -44,20 +49,18 @@
                 <asp:BoundField HeaderText="Formato" DataField="Formato"/>
                 <asp:BoundField HeaderText="Medida" DataField="Medida"/>
                 <asp:BoundField HeaderText="Disponibilidad" DataField="Disponibilidad"/>
-               <asp:ButtonField Text="Ver" CommandName="Ver" ControlStyle-CssClass="btn btn-success"  HeaderText="Ver"/>
-                <asp:ButtonField Text="Editar" CommandName="Editar" ControlStyle-CssClass="btn btn-primary" HeaderText="Editar" />
-               <asp:ButtonField Text="Eliminar" CommandName="Eliminar" ControlStyle-CssClass="btn btn-danger" HeaderText="Eliminar"/>
+         <asp:ButtonField CommandName="Ver" ControlStyle-CssClass="btn btn-success"  HeaderText="Ver" ButtonType="Image" ImageUrl="~/Imagenes/Lupa2.png">
+<ControlStyle CssClass="btn btn-success" Height="40px" Width="45px"></ControlStyle>
+                </asp:ButtonField>
+                <asp:ButtonField CommandName="Editar" ControlStyle-CssClass="btn btn-primary" HeaderText="Editar" ButtonType="Image" ImageUrl="~/Imagenes/editar.png" >
+<ControlStyle CssClass="btn btn-primary" Height="40px" Width="45px"></ControlStyle>
+                </asp:ButtonField>
+               <asp:ButtonField CommandName="Eliminar" ControlStyle-CssClass="btn btn-danger" HeaderText="Eliminar" ButtonType="Image" ImageUrl="~/Imagenes/eliminar.png">
           
-                <asp:TemplateField HeaderText="Acciones">
-                    <ItemTemplate>
-                         <asp:LinkButton runat="server" CssClass="btn btn-success" CommandName="Ver"><i class="fas fa-search"></i></asp:LinkButton>
-                    <asp:LinkButton runat="server" CssClass="btn btn-primary" CommandName="Editar"><i class="fas fa-edit"></i></asp:LinkButton>
-                    <asp:LinkButton runat="server" CssClass="btn btn-danger" CommandName="Eliminar"><i class="fas fa-trash-alt"></i></asp:LinkButton>
-
-
-                    </ItemTemplate>
-
-               </asp:TemplateField>
+<ControlStyle CssClass="btn btn-danger" Height="40px" Width="45px"></ControlStyle>
+                </asp:ButtonField>
+          
+               
 
 
             </Columns>
@@ -67,7 +70,8 @@
 
 
         </asp:GridView>
-
+        
+        </div>
 
     </div>
     <!--Modal editar -->
@@ -120,11 +124,18 @@
                  
                   <asp:Label ID="Label8" runat="server" Text="Precio"></asp:Label>
                  <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" type="number" ></asp:TextBox>
-                   
-                 <asp:Label ID="Label9" runat="server" Text="QR"></asp:Label>
-                 <img  runat="server" id="imgQR"/>
+                   <br />
+                 <div style="display:flex;flex-direction:column; text-align:center">
 
+                 <asp:Label ID="Label9" runat="server" Text="QR"></asp:Label>
+                 <div style="margin-left:3%">
+
+                 <img  runat="server" id="imgQR"/>
+                 </div>
+                 <br />
+                  <br />
                  <asp:Button ID="btnImprimir" runat="server" Text="Imprimir" CssClass="btn btn-primary" />
+                 </div>
 
              </div>
              <div class="modal-footer">

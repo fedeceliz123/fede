@@ -5,7 +5,7 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <div class="container" style="height:auto; background-color:white">
+       <div class="container-fluid" style="height:100%; background-color:white">
 
         <div class="row" style="padding-top:30px">
             <h3 style="margin-left:10px">Carga de eventos</h3>
@@ -20,7 +20,7 @@
             <div class="row">
 
                 <div class="col-lg-11 col-10">
-            <asp:DropDownList ID="selectCLiente" runat="server" CssClass="form-control" AutoPostBack="true"></asp:DropDownList>
+            <asp:DropDownList ID="selectClientes" runat="server" CssClass="form-control" AutoPostBack="true"></asp:DropDownList>
 
                 </div>
                 <div class="col-lg-1 col-2">
@@ -139,17 +139,44 @@
 
        <div class="row" style="padding-top:30px;padding-bottom:30px" >
                 <div class="col-2 col-md-2 col-lg-1">
-                  <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary"  />
+                  <asp:Button ID="btnCargar" runat="server" Text="Cargar" CssClass="btn btn-primary" OnClick="btnCargar_Click"  />
 
                 </div>
                 <div class="col-2 col-md-2 col-lg-1">
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary"  />
+                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click"  />
 
                 </div>
             </div>
            
        </div>
       
+              <!--Modal Carga -->
+ <div class="modal fade" id="modalCarga" tabindex="-1" role="dialog">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                
+                 <asp:Label ID="lblCarga" runat="server" Text="" CssClass="col-form-label-lg text-bold"></asp:Label>
+
+                
+             </div>
+             <div class="modal-body">
+                 <div style="text-align:center">
+
+                 <asp:Image ID="imgCarga" runat="server" Height="150px" />
+                 <br />
+                   <br />
+                 <asp:Label ID="lblAccion" runat="server" Text="" CssClass="col-form-label-md text-bold"></asp:Label>
+                 </div>
+             </div>
+             <div class="modal-footer">
+                 
+               <button class="btn btn-primary" data-dismiss="modal">OK</button>
+             </div>
+         </div>
+     </div>
+ </div>
+
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">

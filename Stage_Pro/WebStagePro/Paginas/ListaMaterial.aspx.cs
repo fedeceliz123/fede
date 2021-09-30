@@ -10,26 +10,33 @@ using Negocio;
 using System.Drawing;
 using MessagingToolkit.QRCode.Codec;
 using System.IO;
+using Gma.QrCodeNet.Encoding;
+using Gma.QrCodeNet.Encoding.Windows.Render;
 
 namespace WebStagePro.Paginas
 {
     public partial class ListaMaterial : System.Web.UI.Page
     {
             Negocio.NegocioMaterial nMat = new NegocioMaterial();
-        private void QR()
+        private void QR( string codigo)
         {
             QRCodeEncoder encoder = new QRCodeEncoder();
-            Bitmap img = encoder.Encode(txtCodigo.Text);
+            Bitmap img = encoder.Encode(codigo);
             System.Drawing.Image QR = (System.Drawing.Image)img;
-
+           
             using (MemoryStream ms = new MemoryStream())
             {
                 QR.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] imageBytes = ms.ToArray();
-                imgQR.Src = "data:image/gif;base64" + Convert.ToBase64String(imageBytes);
+                imgQR.Src = "data:image/png;base64," + Convert.ToBase64String(imageBytes);
                 imgQR.Height = 200;
                 imgQR.Width = 200;
+                              
+               
             }
+
+           
+
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,6 +53,7 @@ namespace WebStagePro.Paginas
             //}
             if (!IsPostBack)
             {
+         
             }
 
         }
@@ -119,6 +127,9 @@ namespace WebStagePro.Paginas
                 txtStock.Text = row["stock_general"].ToString();
                 txtDisponibilidad.Text = row["disponobilidad"].ToString();
                 txtDetalle.Text = row["detalle"].ToString();
+                txtPrecio.Text = row["precio"].ToString();
+
+                QR(row["codigo"].ToString());
 
             }
 
@@ -128,11 +139,13 @@ namespace WebStagePro.Paginas
 
         protected void GVMaterial_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            
-                int index = Convert.ToInt32(e.CommandArgument);
+
+           int index = Convert.ToInt32(e.CommandArgument);
 
             if (e.CommandName == "Editar")
             {
+               
+
                 Session["CodigoMaterial"] = (GVMaterial.DataKeys[index].Value).ToString();
 
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "#myModal", "$('#myModal').modal();", true);
@@ -140,16 +153,20 @@ namespace WebStagePro.Paginas
                 btnEditar.Visible = true;
                 llenarCampos();
                 CamposHabilitados();
+                
                 btnReactivar.Visible = false;
             }
             if (e.CommandName == "Ver")
             {
+                
+
                 Session["CodigoMaterial"] = (GVMaterial.DataKeys[index].Value).ToString();
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "#myModal", "$('#myModal').modal();", true);
                 lblModal.Text = "Ver material";
                 btnEditar.Visible = false;
                 llenarCampos();
                 CamposdesHabilitados();
+               
 
                 string activo = Session["Activo"].ToString();
 
@@ -164,6 +181,7 @@ namespace WebStagePro.Paginas
             }
             if (e.CommandName == "Eliminar")
             {
+                
                 Session["CodigoMaterial"] = (GVMaterial.DataKeys[index].Value).ToString();
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "#modalEliminar", "$('#modalEliminar').modal();", true);
                 lblEliminar.Text = lblEliminar.Text + " el material " + Session["CodigoMaterial"].ToString();
@@ -181,6 +199,7 @@ namespace WebStagePro.Paginas
             txtStock.Enabled = true;
             selectFormato.Enabled = true;
             selectMedida.Enabled = true;
+            txtPrecio.Enabled = true;
         }
         private void CamposdesHabilitados()
         {
@@ -190,6 +209,7 @@ namespace WebStagePro.Paginas
             txtStock.Enabled = false;
             selectFormato.Enabled = false;
             selectMedida.Enabled = false;
+            txtPrecio.Enabled = false;
         }
 
 
@@ -211,7 +231,7 @@ namespace WebStagePro.Paginas
             try
             {
 
-            nMat.ModificarMaterial(int.Parse(selectMedida.SelectedValue.ToString()),int.Parse(selectFormato.SelectedValue.ToString()),int.Parse(txtStock.Text),int.Parse(txtDisponibilidad.Text),txtCodigo.Text,txtDetalle.Text);
+            nMat.ModificarMaterial(int.Parse(selectMedida.SelectedValue.ToString()),int.Parse(selectFormato.SelectedValue.ToString()),int.Parse(txtStock.Text),int.Parse(txtDisponibilidad.Text),txtCodigo.Text,txtDetalle.Text,int.Parse(txtPrecio.Text));
                 imgCarga.ImageUrl = "../Imagenes/V.png";
                 lblCarga.Text = "Modificacion de Material";
                 lblAccion.Text = "Se realizo la modificacion con exito";
@@ -342,7 +362,7 @@ namespace WebStagePro.Paginas
         }
         protected void txtCodigo_TextChanged(object sender, EventArgs e)
         {
-            QR();
+           
         }
     }
 }

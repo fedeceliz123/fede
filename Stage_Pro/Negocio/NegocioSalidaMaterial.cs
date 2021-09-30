@@ -14,6 +14,17 @@ namespace Negocio
 
         Datos.SalidaMaterial.ConsultasSalidaMaterial conSal = new Datos.SalidaMaterial.ConsultasSalidaMaterial();
 
+
+        public string reCodigo(int id)
+        {
+            return conSal.recCodigo(id);
+        }
+
+        public int reCantidad(int id)
+        {
+            return conSal.recCantidad(id);
+        }
+
         public void cargarSalida(Entidades.SalidaMaterial sal)
         {
             conSal.cargarSalidaMaterial(sal);

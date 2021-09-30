@@ -21,9 +21,9 @@ namespace Negocio
         {
             cEven.CargarEvento(even);
         }
-        public DataTable ListarEventos(string activo,string dato)
+        public DataTable ListarEventos(string activo,string dato,string date)
         {
-            return cEven.ListarEventos(activo,dato);
+            return cEven.ListarEventos(activo,dato,date);
         }
 
         public DataTable CargarClientes()
@@ -60,6 +60,17 @@ namespace Negocio
         {
             return cEven.ListarInactivos(activo,dato);
         }
+
+        public int Total(int id)
+        {
+            return cEven.Total(id);
+        }
+
+        public void actualizarTotal(int total, int id)
+        {
+            cEven.actualizarTotal(total,id);
+        }
+
 
     }
 }

@@ -194,3 +194,7 @@ C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\WebStage
 C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\WebStagePro\obj\Debug\WebStagePro.dll
 C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\WebStagePro\obj\Debug\WebStagePro.pdb
 C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\WebStagePro\bin\MessagingToolkit.QRCode.dll
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\MessagingToolkit.QRCode.dll
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.dll
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.pdb
+C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.xml

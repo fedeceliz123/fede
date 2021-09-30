@@ -492,7 +492,7 @@ namespace UI.Material
             }
             else if (accion == 2)
             {
-                nMat.ModificarMaterial(mat.medida,mat.formato,mat.stock_general,mat.disponobilidad,codigo2,mat.detalle);
+               // nMat.ModificarMaterial(mat.medida,mat.formato,mat.stock_general,mat.disponobilidad,codigo2,mat.detalle);
                 llenarDGV(nMat.ListarMaterial(activo));
 
                 panelDatosPersonales.Visible = false;
@@ -527,6 +527,7 @@ namespace UI.Material
             pbQR.Image.Save(MS, System.Drawing.Imaging.ImageFormat.Jpeg);
 
             mat.codigo_qr = MS;
+            
             limpiar();
            
 

@@ -16,7 +16,10 @@ namespace Negocio
         {
             return Mat.LlenarTipo();
         }
-
+        public int Disponibilidad(string codigo)
+        {
+            return Mat.Disponibilidad(codigo);
+        }
 
         public DataTable LlenarModelo(int tipo)
         {
@@ -84,9 +87,9 @@ namespace Negocio
             return Mat.LlenarCampos(codigo);
         }
 
-        public void ModificarMaterial(int medida, int formato, int stock, int disp, string codigo,string detalle)
+        public void ModificarMaterial(int medida, int formato, int stock, int disp, string codigo,string detalle,int precio)
         {
-            Mat.ModificarMaterial(medida,formato,stock,disp,codigo,detalle);
+            Mat.ModificarMaterial(medida,formato,stock,disp,codigo,detalle,precio);
         }
 
         public void BajaMaterial(string codigo, string motivo)

@@ -29,7 +29,7 @@ namespace Datos.ConsultaEventos
 
         public void CargarEvento(Eventos ev)
         {
-            string consulta = "insert into eventos (id_cliente,fecha_inicio,hora_inicio,fecha_fin,lugar,encargado,total,detalle,activo)values(@cli,@fi,@hora,@ff,@lugar,@enc,@total,@det,'si')";
+            string consulta = "insert into eventos (id_cliente,fecha_inicio,hora_inicio,fecha_fin,lugar,encargado,total,detalle,activo,descuento)values(@cli,@fi,@hora,@ff,@lugar,@enc,@total,@det,'si',@des)";
             SqlCommand cmd = new SqlCommand(consulta, Conetar());
 
             cmd.Parameters.AddWithValue("@cli",ev.id_cliente);
@@ -40,18 +40,18 @@ namespace Datos.ConsultaEventos
             cmd.Parameters.AddWithValue("@enc", ev.encargado);
             cmd.Parameters.AddWithValue("@total", ev.total);
             cmd.Parameters.AddWithValue("@det", ev.detalle);
-            
+            cmd.Parameters.AddWithValue("@des", ev.descuento);
 
             cmd.ExecuteNonQuery();
         }
 
-        public DataTable ListarEventos(string activo,string dato)
+        public DataTable ListarEventos(string activo,string dato, string date)
 
         {
             string fecha = (DateTime.Now.AddDays(-1)).ToString("yyyy/MM/dd");
 
             DataTable dt = new DataTable();
-            string consulta = "select e.id as 'id',e.lugar as 'Lugar',e.fecha_inicio as 'Fecha',e.hora_inicio as 'Hora',c.nombre+' '+c.apellido as 'Cliente' from eventos e, clientes_cf c where (e.activo='"+activo+"' and fecha_inicio > '"+fecha+ "') and id_cliente=c.dni and (c.nombre+' '+c.apellido like '%" + dato + "%' or lugar like '%" + dato + "%' or fecha_inicio like '%" + dato + "%')";
+            string consulta = "select e.id as 'id',e.lugar as 'Lugar',e.fecha_inicio as 'Fecha',e.hora_inicio as 'Hora',c.nombre+' '+c.apellido as 'Cliente' from eventos e, clientes_cf c where (e.activo='"+activo+"' and fecha_inicio > '"+fecha+ "') and id_cliente=c.dni and (c.nombre+' '+c.apellido like '%" + dato + "%' or lugar like '%" + dato + "%' or fecha_inicio like '%" + date + "%')";
             SqlDataAdapter da = new SqlDataAdapter(consulta, Conetar());
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -144,6 +144,37 @@ namespace Datos.ConsultaEventos
             cmd.ExecuteNonQuery();
         }
 
+        public int Total(int id)
+        {
+            int total = 0;
+
+            DataTable dt = new DataTable();
+            string consulta = "select precio from salida_material where id_evento="+id;
+            SqlDataAdapter da = new SqlDataAdapter(consulta, Conetar());
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dt = ds.Tables[0];
+             
+            foreach(DataRow row in dt.Rows)
+            {
+                total = total + int.Parse(row["precio"].ToString());
+            }
+
+
+
+
+            return total;
+
+        }
+
+        public void actualizarTotal(int total, int id)
+        {
+            string consulta = "set dateformat dmy UPDATE eventos set total="+total+" where id=" + id;
+
+            SqlCommand cmd = new SqlCommand(consulta, Conetar());
+
+            cmd.ExecuteNonQuery();
+        }
 
     }
 }

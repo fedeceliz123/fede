@@ -156,7 +156,7 @@ namespace Datos.Consulta_Matrial
 
         public void CargaMaterial(Material material)
         {
-            string consulta = "insert into material (tipo,modelo,numero,codigo,medida,formato,activo,detalle,stock_general,disponobilidad)values(@tipo,@modelo,@num,@cod,@medida,@nombre,'si',@detalle,@stock,@disp)";
+            string consulta = "insert into material (tipo,modelo,numero,codigo,medida,formato,activo,detalle,stock_general,disponobilidad,precio)values(@tipo,@modelo,@num,@cod,@medida,@nombre,'si',@detalle,@stock,@disp,@precio)";
             SqlCommand cmd = new SqlCommand(consulta, Conetar());
 
             cmd.Parameters.AddWithValue("@tipo", material.tipo);
@@ -167,7 +167,7 @@ namespace Datos.Consulta_Matrial
             cmd.Parameters.AddWithValue("@nombre", material.formato);
             cmd.Parameters.AddWithValue("@stock", material.stock_general);
             cmd.Parameters.AddWithValue("@disp", material.disponobilidad);
-            //cmd.Parameters.AddWithValue("@qr", material.codigo_qr);
+            cmd.Parameters.AddWithValue("@precio", material.precio);
 
             cmd.Parameters.AddWithValue("@detalle", material.detalle);
             cmd.ExecuteNonQuery();
@@ -222,9 +222,9 @@ namespace Datos.Consulta_Matrial
             return dt;
         }
 
-        public void ModificarMaterial(int medida,int formato,int stock,int disp,string codigo,string detalle)
+        public void ModificarMaterial(int medida,int formato,int stock,int disp,string codigo,string detalle,int precio)
         {
-            string consulta = "set dateformat dmy UPDATE material set medida = "+medida+" , formato= "+formato+ ", stock_general="+stock+ ", disponobilidad="+disp+", detalle='"+detalle+"' where codigo='"+codigo+"'";
+            string consulta = "set dateformat dmy UPDATE material set medida = "+medida+" , formato= "+formato+ ", stock_general="+stock+ ", disponobilidad="+disp+", detalle='"+detalle+"', precio="+precio+" where codigo='"+codigo+"'";
 
             SqlCommand cmd = new SqlCommand(consulta, Conetar());
 
@@ -256,7 +256,23 @@ namespace Datos.Consulta_Matrial
         }
 
 
+        public int Disponibilidad(string codigo)
+        {
+            int ultimo=0;
+           
+            string consulta = "select disponobilidad from material where codigo='" + codigo + "'";
+            SqlCommand Comando = new SqlCommand(consulta, Conetar());
+            SqlDataReader lector = Comando.ExecuteReader();
+            if (lector.Read() == true)
+            {
 
+
+                ultimo = int.Parse(lector["disponobilidad"].ToString()) ;
+
+            }
+
+            return ultimo;
+        }
 
 
     }
@@ -264,5 +280,5 @@ namespace Datos.Consulta_Matrial
 
 
 
-    }
+  }
 

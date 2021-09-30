@@ -19,6 +19,7 @@ namespace Entidades
         public string detalle { get; set; }
         public string activo { get; set; }
         public string motivo { get; set; }
+        public double descuento { get; set; }
 
     }
 }

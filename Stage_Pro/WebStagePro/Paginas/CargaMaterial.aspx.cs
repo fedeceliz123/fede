@@ -29,7 +29,7 @@ namespace WebStagePro.Paginas
             {
                 QR.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] imageBytes = ms.ToArray();
-                imgQR.Src = "data:image/gif;base64" + Convert.ToBase64String(imageBytes);
+                imgQR.Src = "data:image/gif;base64," + Convert.ToBase64String(imageBytes);
                 imgQR.Height = 200;
                 imgQR.Width = 200;
             }
@@ -261,7 +261,7 @@ namespace WebStagePro.Paginas
                 mat.disponobilidad = 0;
             }
             mat.detalle = txtDetalle.Text;
-          
+            mat.precio = int.Parse(txtPrecio.Text);
 
 
         }

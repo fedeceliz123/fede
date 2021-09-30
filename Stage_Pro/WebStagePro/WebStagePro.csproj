@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
     <Reference Include="MessagingToolkit.QRCode, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
     </Reference>
@@ -209,7 +212,14 @@
     <Content Include="examples\timegrid-views.html" />
     <Content Include="examples\week-numbers.html" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\box.png" />
+    <Content Include="Imagenes\box2.png" />
+    <Content Include="Imagenes\box3.png" />
+    <Content Include="Imagenes\editar.png" />
+    <Content Include="Imagenes\eliminar.png" />
     <Content Include="Imagenes\Fondo.jpg" />
+    <Content Include="Imagenes\lupa.png" />
+    <Content Include="Imagenes\Lupa2.png" />
     <Content Include="Imagenes\mas.jpg" />
     <Content Include="Imagenes\+.png" />
     <Content Include="Imagenes\logo.png" />
@@ -2358,6 +2368,7 @@
     <Compile Include="Paginas\Proveedores\ListarProveedores.aspx.designer.cs">
       <DependentUpon>ListarProveedores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\QRCodeGenerator.cs" />
     <Compile Include="Paginas\SaldidaMaterial\MaterialParaEvento.aspx.cs">
       <DependentUpon>MaterialParaEvento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

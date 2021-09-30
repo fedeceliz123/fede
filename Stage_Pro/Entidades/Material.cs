@@ -22,6 +22,7 @@ namespace Entidades
         public string fecha_egreso { get; set; }
         public string motivo { get; set; }
         public string detalle { get; set; }
+        public int precio { get; set; }
 
 
 

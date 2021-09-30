@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-       <div class="container" style="height:auto; background-color:white">
+       <div class="container-fluid" style="height:auto; background-color:white">
 
          <div class="row" style="padding-top:30px">
             <h3 style="margin-left:10px">Carga de empleado</h3>
