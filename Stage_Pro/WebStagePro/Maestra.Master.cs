@@ -15,17 +15,17 @@ namespace WebStagePro
         Negocio.NegocioLogin login = new NegocioLogin();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string nombre = Request.QueryString["empleado"].ToString();
+           // string nombre = Request.QueryString["empleado"].ToString();
 
-            lblUsuario.Text = nombre;
+           // lblUsuario.Text = nombre;
 
-            string dni = Session["Usuario"].ToString();
+           // string dni = Session["Usuario"].ToString();
 
-            MemoryStream ms = new MemoryStream();
+           // MemoryStream ms = new MemoryStream();
 
-           ms= login.imagen(dni);
+           //ms= login.imagen(dni);
 
-            imagen(ms);
+           // imagen(ms);
 
         }
 

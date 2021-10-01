@@ -385,6 +385,7 @@
     <Content Include="Paginas\Proveedores\CargarProveedores.aspx" />
     <Content Include="Paginas\Proveedores\ListarProveedores.aspx" />
     <Content Include="Paginas\SaldidaMaterial\MaterialParaEvento.aspx" />
+    <Content Include="Paginas\SalidaQR\SalidaConQR.aspx" />
     <Content Include="Pikaday-master\.gitattributes" />
     <Content Include="Pikaday-master\.gitignore" />
     <Content Include="Pikaday-master\css\pikaday.css" />
@@ -2278,6 +2279,10 @@
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\ScanerQR\adapter-latest.js" />
+    <Content Include="Scripts\ScanerQR\html5-qrcode.min.js" />
+    <Content Include="Scripts\ScanerQR\instascan.min.js" />
+    <Content Include="Scripts\ScanerQR\jquery.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2375,6 +2380,13 @@
     </Compile>
     <Compile Include="Paginas\SaldidaMaterial\MaterialParaEvento.aspx.designer.cs">
       <DependentUpon>MaterialParaEvento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\SalidaQR\SalidaConQR.aspx.cs">
+      <DependentUpon>SalidaConQR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\SalidaQR\SalidaConQR.aspx.designer.cs">
+      <DependentUpon>SalidaConQR.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

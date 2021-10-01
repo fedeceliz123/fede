@@ -198,3 +198,6 @@ C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.dll
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.pdb
 C:\Users\federico\Desktop\TpSistemasProgramacion-main\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.xml
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.dll
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.pdb
+C:\Users\fceliz\Desktop\Fede\TpSistemasProgramacion-main\fede\Stage_Pro\WebStagePro\bin\Gma.QrCodeNet.Encoding.xml
